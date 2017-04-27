@@ -1,0 +1,323 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block article %}
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-sm-2 categories side">
+                <ul class="menu">
+                    <li class="menu__list"><a class="menu_link" href="#">Видеорегистраторы</a>
+                        <ul class="menu__drop" id="drop1">
+                            <li><a class="menu_link" href="#">Subcategory #</a></li>
+                            <li><a class="menu_link" href="#">Subcategory #</a></li>
+                            <li><a class="menu_link" href="#">Subcategory #</a></li>
+                            <li><a class="menu_link" href="#">Subcategory #</a></li>
+                            <li><a class="menu_link" href="#">Subcategory #</a></li>
+                            <li><a class="menu_link" href="#">Subcategory #</a></li>
+                            <li><a class="menu_link" href="#">Subcategory #</a></li>
+                            <li><a class="menu_link" href="#">Subcategory #</a></li>
+                        </ul>
+                    </li>
+                    <li class="menu__list"><a class="menu_link" href="#">Аудио</a>
+                        <ul class="menu__drop" id="drop2">
+                            <li><a class="menu_link" href="#">Усилители</a></li>
+                            <li><a class="menu_link" href="#">Магнитолы</a></li>
+                            <li><a class="menu_link" href="#">Колонки</a></li>
+                            <li><a class="menu_link" href="#">Сабвуферы</a></li>
+                            <li><a class="menu_link" href="#">FM модули</a></li>
+                            <li><a class="menu_link" href="#">Subcategory #</a></li>
+                            <li><a class="menu_link" href="#">Subcategory #</a></li>
+                            <li><a class="menu_link" href="#">Subcategory #</a></li>
+                        </ul>
+                    </li>
+                    <li class="menu__list"><a class="menu_link" href="#">Сигнализации</a>
+                        <ul class="menu__drop" id="drop3">
+                            <li><a class="menu_link" href="#">Subcategory #</a></li>
+                            <li><a class="menu_link" href="#">Subcategory #</a></li>
+                            <li><a class="menu_link" href="#">Subcategory #</a></li>
+                            <li><a class="menu_link" href="#">Subcategory #</a></li>
+                            <li><a class="menu_link" href="#">Subcategory #</a></li>
+                            <li><a class="menu_link" href="#">Subcategory #</a></li>
+                            <li><a class="menu_link" href="#">Subcategory #</a></li>
+                            <li><a class="menu_link" href="#">Subcategory #</a></li>
+                        </ul>
+                    </li>
+                    <li class="menu__list"><a class="menu_link" href="#">Навигаторы</a>
+                        <ul class="menu__drop" id="drop4">
+                            <li><a class="menu_link" href="#">Subcategory #</a></li>
+                            <li><a class="menu_link" href="#">Subcategory #</a></li>
+                            <li><a class="menu_link" href="#">Subcategory #</a></li>
+                            <li><a class="menu_link" href="#">Subcategory #</a></li>
+                            <li><a class="menu_link" href="#">Subcategory #</a></li>
+                            <li><a class="menu_link" href="#">Subcategory #</a></li>
+                            <li><a class="menu_link" href="#">Subcategory #</a></li>
+                            <li><a class="menu_link" href="#">Subcategory #</a></li>
+                        </ul>
+                    </li>
+                    <li class="menu__list"><a class="menu_link" href="#">Оптика</a>
+                        <ul class="menu__drop" id="drop5">
+                            <li><a class="menu_link" href="#">Subcategory #</a></li>
+                            <li><a class="menu_link" href="#">Subcategory #</a></li>
+                            <li><a class="menu_link" href="#">Subcategory #</a></li>
+                            <li><a class="menu_link" href="#">Subcategory #</a></li>
+                            <li><a class="menu_link" href="#">Subcategory #</a></li>
+                            <li><a class="menu_link" href="#">Subcategory #</a></li>
+                            <li><a class="menu_link" href="#">Subcategory #</a></li>
+                            <li><a class="menu_link" href="#">Subcategory #</a></li>
+                        </ul>
+                    </li>
+                    <li class="menu__list"><a class="menu_link" href="#">Все для парковки</a>
+                        <ul class="menu__drop" id="drop6">
+                            <li><a class="menu_link" href="#">Subcategory #</a></li>
+                            <li><a class="menu_link" href="#">Subcategory #</a></li>
+                            <li><a class="menu_link" href="#">Subcategory #</a></li>
+                            <li><a class="menu_link" href="#">Subcategory #</a></li>
+                            <li><a class="menu_link" href="#">Subcategory #</a></li>
+                            <li><a class="menu_link" href="#">Subcategory #</a></li>
+                            <li><a class="menu_link" href="#">Subcategory #</a></li>
+                            <li><a class="menu_link" href="#">Subcategory #</a></li>
+                        </ul>
+                    </li>
+                    <li class="menu__list"><a class="menu_link" href="#">Разное</a>
+                        <ul class="menu__drop" id="drop7">
+                            <li><a class="menu_link" href="#">Subcategory #</a></li>
+                            <li><a class="menu_link" href="#">Subcategory #</a></li>
+                            <li><a class="menu_link" href="#">Subcategory #</a></li>
+                            <li><a class="menu_link" href="#">Subcategory #</a></li>
+                            <li><a class="menu_link" href="#">Subcategory #</a></li>
+                            <li><a class="menu_link" href="#">Subcategory #</a></li>
+                            <li><a class="menu_link" href="#">Subcategory #</a></li>
+                            <li><a class="menu_link" href="#">Subcategory #</a></li>
+                        </ul>
+                    </li>
+                    <li class="menu__list"><a class="menu_link" href="#">Category 8</a>
+                        <ul class="menu__drop" id="drop8">
+                            <li><a class="menu_link" href="#">Subcategory #</a></li>
+                            <li><a class="menu_link" href="#">Subcategory #</a></li>
+                            <li><a class="menu_link" href="#">Subcategory #</a></li>
+                            <li><a class="menu_link" href="#">Subcategory #</a></li>
+                            <li><a class="menu_link" href="#">Subcategory #</a></li>
+                            <li><a class="menu_link" href="#">Subcategory #</a></li>
+                            <li><a class="menu_link" href="#">Subcategory #</a></li>
+                            <li><a class="menu_link" href="#">Subcategory #</a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+            <div class="col-sm-6 slider">
+                <div class="slide_show">
+                    <div class="slide">
+                        <a href="">
+                            <img src="{% static 'image/slide1.jpg' %}" alt="картинка слайда 1" class="slide_img">
+                            <div class="slide_text">
+                                <h3 class="slide_title">Слайд 1</h3>
+                                <p class="slide_description">описание слайда №1</p>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="slide">
+                        <a href="">
+                            <img src="{% static 'image/slide2.jpg' %}" alt="картинка слайда 2" class="slide_img">
+                            <div class="slide_text">
+                                <h3 class="slide_title">Слайд 2</h3>
+                                <p class="slide_description">описание слайда №2</p>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="slide">
+                        <a href="">
+                            <img src="{% static 'image/slide3.jpg' %}" alt="картинка слайда 3" class="slide_img">
+                            <div class="slide_text">
+                                <h3 class="slide_title">Слайд 3</h3>
+                                <p class="slide_description">описание слайда №3</p>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-sm-4 product_of_the_day">
+                <div class="tovar_dnya">
+                    <h3 id="good_price_title">Товар дня</h3>
+                    <p id="demo"></p>
+                    <img id="tovar_dnya" src="{% static 'image/product_of_the_day.jpg' %}" height="auto" width="300px"/>
+                    <p>Видеорегистратор</p>
+                    <p style="font-size:24px"><b>Artway AV-600</b></p>
+                    <div class="price_top">
+                        <p style="font-size: 28px;"><span
+                                style="text-decoration: line-through; font-size: 24px">3 290</span>
+                            <br/> 3 090 сом</p>
+                    </div>
+                    <div class="cart_top">
+                        <a href="">
+                            <i class="fa fa-cart-arrow-down fa-5x" style="color:#faac3d; margin-left: 80px"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!--- ---------------- -->
+
+    <div class="jumbotron" id="jumb">
+        <h2 class="new">Новинки и Спецпредложения <i class="fa fa-arrow-circle-right fa-lg arrow"
+                                                     aria-hidden="true"></i></h2>
+    </div>
+    <div class="container">
+        <div class="row">
+            <div class="card-group">
+                <div class="col-md-3">
+                    <div class="card1">
+                        <img class="card-img-top" src="{% static 'image/registr.jpg' %}" alt="Card image cap"
+                             width="150" height="224">
+                        <div class="card-block">
+                            <h6>Мобильный телефон</h6>
+                            <h4 class="card-title">Iphone 6S 16GB</h4>
+                            <h5>(черный мат)</h5>
+                            <div class="card-footer">
+                                <p><strong>24 500</strong> <i class="fa fa-rub fa-lg" aria-hidden="true"></i>
+                                    <a href="path/to/shopping/cart" class="btn btn-warning">
+                                        <i class="fa fa-shopping-cart" aria-hidden="true"></i></a></p>
+                                <small class="text-muted">Last updated 3 mins ago</small>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-md-3">
+                    <div class="card2">
+                        <img class="card-img-top" src="{% static 'image/iphone3.jpg' %}" alt="Card image cap">
+                        <div class="card-block">
+                            <h6>Мобильный телефон</h6>
+                            <h4 class="card-title">Iphone 6S 16GB</h4>
+                            <h5>(черный мат)</h5>
+                            <div class="card-footer">
+                                <p><strong>24 500</strong> <i class="fa fa-rub fa-lg" aria-hidden="true"></i>
+                                    <a href="path/to/shopping/cart" class="btn btn-warning">
+                                        <i class="fa fa-shopping-cart" aria-hidden="true"></i></a></p>
+                                <small class="text-muted">Last updated 3 mins ago</small>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-md-3">
+                    <div class="card3">
+                        <img class="card-img-top" src="{% static 'image/iphone3.jpg' %}" alt="Card image cap">
+                        <div class="card-block">
+                            <h6>Мобильный телефон</h6>
+                            <h4 class="card-title">Iphone 6S 16GB</h4>
+                            <h5>(черный мат)</h5>
+                            <div class="card-footer">
+                                <p><strong>24 500</strong> <i class="fa fa-rub fa-lg" aria-hidden="true"></i>
+                                    <a href="path/to/shopping/cart" class="btn btn-warning">
+                                        <i class="fa fa-shopping-cart" aria-hidden="true"></i></a></p>
+                                <small class="text-muted">Last updated 3 mins ago</small>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-md-3">
+                    <div class="card4">
+                        <img class="card-img-top" src="{% static 'image/iphone3.jpg' %}" alt="Card image cap">
+                        <div class="card-block">
+                            <h6>Мобильный телефон</h6>
+                            <h4 class="card-title">Iphone 6S 16GB</h4>
+                            <h5>(черный мат)</h5>
+                            <div class="card-footer">
+                                <p><strong>24 500</strong> <i class="fa fa-rub fa-lg" aria-hidden="true"></i>
+                                    <a href="path/to/shopping/cart" class="btn btn-warning">
+                                        <i class="fa fa-shopping-cart" aria-hidden="true"></i></a></p>
+                                <small class="text-muted">Last updated 3 mins ago</small>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    </div>
+
+    <div class="jumbo">
+        <div class="jumbotron">
+    <span class="shrift">
+      <h2 class="new1">Видео Регистраторы <i class="fa fa-arrow-circle-right fa-lg arrow" aria-hidden="true"></i></h2>
+        <h5>Новинки и бестселлеры</h5>
+    </span>
+        </div>
+    </div>
+
+    <div class="container">
+        <div class="row">
+            <div class="card-group">
+                <div class="col-md-3">
+                    <div class="card1">
+                        <img class="card-img-top" src="{% static 'image/iphone3.jpg' %}" alt="Card image cap">
+                        <div class="card-block">
+                            <h6>Мобильный телефон</h6>
+                            <h4 class="card-title">Iphone 6S 16GB</h4>
+                            <h5>(черный мат)</h5>
+                            <div class="card-footer">
+                                <p><strong>24 500</strong> <i class="fa fa-rub fa-lg" aria-hidden="true"></i>
+                                    <a href="path/to/shopping/cart" class="btn btn-warning">
+                                        <i class="fa fa-shopping-cart" aria-hidden="true"></i></a></p>
+                                <small class="text-muted">Last updated 3 mins ago</small>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-md-3">
+                <div class="card2">
+                    <img class="card-img-top" src="{% static 'image/iphone3.jpg' %}" alt="Card image cap">
+                    <div class="card-block">
+                        <h6>Мобильный телефон</h6>
+                        <h4 class="card-title">Iphone 6S 16GB</h4>
+                        <h5>(черный мат)</h5>
+                        <div class="card-footer">
+                            <p><strong>24 500</strong> <i class="fa fa-rub fa-lg" aria-hidden="true"></i>
+                                <a href="path/to/shopping/cart" class="btn btn-warning">
+                                    <i class="fa fa-shopping-cart" aria-hidden="true"></i></a></p>
+                            <small class="text-muted">Last updated 3 mins ago</small>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-md-3">
+                <div class="card3">
+                    <img class="card-img-top" src="{% static 'image/iphone3.jpg' %}" alt="Card image cap">
+                    <div class="card-block">
+                        <h6>Мобильный телефон</h6>
+                        <h4 class="card-title">Iphone 6S 16GB</h4>
+                        <h5>(черный мат)</h5>
+                        <div class="card-footer">
+                            <p><strong>24 500</strong> <i class="fa fa-rub fa-lg" aria-hidden="true"></i>
+                                <a href="path/to/shopping/cart" class="btn btn-warning">
+                                    <i class="fa fa-shopping-cart" aria-hidden="true"></i></a></p>
+                            <small class="text-muted">Last updated 3 mins ago</small>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-md-3">
+                <div class="card4">
+                    <img class="card-img-top" src="{% static 'image/iphone3.jpg' %}" alt="Card image cap">
+                    <div class="card-block">
+                        <h6>Мобильный телефон</h6>
+                        <h4 class="card-title">Iphone 6S 16GB</h4>
+                        <h5>(черный мат)</h5>
+                        <div class="card-footer">
+                            <p><strong>24 500</strong> <i class="fa fa-rub fa-lg" aria-hidden="true"></i>
+                                <a href="path/to/shopping/cart" class="btn btn-warning">
+                                    <i class="fa fa-shopping-cart" aria-hidden="true"></i></a></p>
+                            <small class="text-muted">Last updated 3 mins ago</small>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+{% endblock article %}

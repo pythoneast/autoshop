@@ -1,0 +1,103 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8" />
+    <link rel="stylesheet" type="text/css" href="{% static 'css/bootstrap.min.css' %}">
+    <link rel="stylesheet" type="text/css" href="{% static 'css/font-awesome.min.css' %}">
+    <link rel="stylesheet" type="text/css" href="{% static 'slick/slick.css' %}" />
+    <link rel="stylesheet" type="text/css" href="{% static 'slick/slick-theme.css' %}" />
+    <link rel="stylesheet" type="text/css" href="{% static 'css/style.css' %}">
+    <title>{% block page_title %}{% endblock page_title %}</title>
+</head>
+
+<body>
+    <header>
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-sm-12 top_header nopadding">
+                    <div class="col-sm-3 col-lg-3">
+                        <img src="{% static 'image/logo.png' %}" height="60" width="300" />
+                    </div>
+                    <div class="col-sm-3 search">
+                        <input style="float:left" type="search" class="form-control" id="">
+                        <i style="position:absolute; float:right; margin-top: 9px; margin-left: -25px" class="fa fa-search fa-lg" area-hidden="true"></i>
+                    </div>
+                    <a href="">
+                        <div class="col-sm-2 authenticate">
+                            <i class="fa fa-user-circle-o fa-3x" style="color:#faac3d"></i>
+                            <p class="user-auth">
+                                Username
+                            </p>
+                        </div>
+                    </a>
+                    <a href="">
+                        <div class="col-sm-2 cart">
+                            <i class="fa fa-cart-arrow-down fa-3x" style="color:#faac3d"></i>
+                            <p class="user-cart">
+                                Корзина
+                            </p>
+                        </div>
+                    </a>
+                    <a href="">
+                        <div class="col-sm-2 number">
+                            <i class="fa fa-phone-square fa-3x" style="color:#faac3d"></i>
+                            <p class="mobile">
+                                0708 415 277
+                                <br /> 0708 996 999
+                            </p>
+                        </div>
+                    </a>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-sm-12 bottom_header nopadding">
+                    <a href="#" onclick="return false">
+                        <div class="col-sm-2 catalog">
+                            <i class="fa fa-bars fa-2x"></i>
+                            <p class="katalog">Каталог товаров</p>
+                        </div>
+                    </a>
+                    <a href="">
+                        <div class="col-sm-2 akcii">
+                            <p>Акции и скидки</p>
+                        </div>
+                    </a>
+                    <a href="">
+                        <div class="col-sm-2 akcii">
+                            <p>Доставка и оплата</p>
+                        </div>
+                    </a>
+                    <a href="">
+                        <div class="col-sm-2 akcii">
+                            <p>Местоположение</p>
+                        </div>
+                    </a>
+                    <a href="">
+                        <div class="col-sm-2 akcii">
+                            <p>Отзывы и комментарии</p>
+                        </div>
+                    </a>
+                    <a href="">
+                        <div class="col-sm-2 akcii">
+                            <p>О компании</p>
+                        </div>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </header>
+    <article>
+        {% block article %}
+        {% endblock article %}
+    </article>
+    <footer></footer>
+    <script type="text/javascript" src="{% static 'js/jquery-3.2.1.min.js' %}"></script>
+    <script type="text/javascript" src="{% static 'js/script.js' %}"></script>
+    <script type="text/javascript" src="{% static 'js/bootstrap.min.js' %}"></script>
+    <script type="text/javascript" src="{% static 'slick/slick.min.js' %}"></script>
+</body>
+
+</html>
