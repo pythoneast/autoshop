@@ -1,0 +1,10 @@
+
+DATABASES = {
+    'default': {
+        'ENGINE': 'django.db.backends.mysql',
+        'NAME': 'autoshop',
+        'USER': 'root',
+        'PASSWORD': 'MY_SECRET_PASSWORD',
+        'HOSTNAME': 'localhost',
+    }
+}
