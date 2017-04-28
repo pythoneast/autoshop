@@ -21,6 +21,7 @@ from autoshop import views
 urlpatterns = [
     url(r'^admin/', admin.site.urls),
     url(r'^$', views.index, name='index-main'),
+    url(r'^category/', include('autoshop.products.urls')),
 ]
 
 if settings.DEBUG:

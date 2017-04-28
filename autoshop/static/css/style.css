@@ -290,12 +290,12 @@ a.menu_link {
     text-decoration: none;
 }
 
-.menu li: first-child a,
+.menu li:first-child a,
 .menu li .menu__drop li a:first-child {
     border-radius: 3px 3px 0 0;
 }
 
-.menu li: last-child a,
+.menu li:last-child a,
 .menu li .menu__drop li a:last-child {
     border-radius: 0 0 3px 3px;
     border-bottom: 0;
@@ -356,7 +356,7 @@ a.menu_link {
 }
 
 img#tovar_dnya {
-    margin-left: 0 auto;
+    margin-left: 0;
     margin-bottom: 40px;
 }
 
@@ -387,7 +387,7 @@ img#tovar_dnya {
     color: white;
 }
 .new{
-    display: absolute;
+
     font-size: 30px;
 }
 .arrow{
@@ -409,32 +409,27 @@ img#tovar_dnya {
     margin-left: 10px;
 }
 .card-img-top{
-    display: absolute;
     margin-left: 80px;
     margin-top: 70px;
 }
 .card1{
     background-color: white;
-    display: absolute;
     margin-top: -29px;
     margin-right:-10px;
     margin-left: -22px;
     }
 .card2{
     background-color: white;
-    display: absolute;
     margin-top: -29px;
     margin-left: -19px;
 }
 .card3{
     background-color: white;
-    display: absolute;
     margin-top: -29px;
     margin-left: -29px;
 }
 .card4{
     background-color: white;
-    display: absolute;
     margin-top: -29px;
     margin-left: -29px;
     margin-right: -21px;
@@ -445,4 +440,44 @@ p{
 
 .jumbo{
     margin-top: 50px;
+}
+
+/*Footer starts here */
+li {
+    list-style: none;
+    display: inline-block;
+    text-align: center;
+}
+.footer1 {
+    text-decoration: none;
+    font-size: 3rem;
+    color: white;
+
+}
+.jumbotron {
+    background-color: black;
+}
+
+span {
+    font-size: 2rem;
+    color: white;
+}
+
+.icon-style {
+    color: white;
+}
+.logo {
+    margin-left: 40rem;
+    margin-top: 10rem;
+}
+.elsom {
+    margin-left: 11rem;
+}
+.link {
+    color: white;
+
+    margin-left: 5rem;
+}
+.img1 {
+    margin-left: 5rem;
 }
