@@ -21,7 +21,7 @@ header {
 }
 
 article {
-    height: 1700px;
+    height: auto;
     width: 100%;
     border: 0px solid blue;
     background: #ededed;
@@ -31,7 +31,7 @@ article {
 footer {
     height: 500px;
     width: 100%;
-    border: 1px solid indigo;
+    border: 0px solid indigo;
 }
 
 div.top_header {
@@ -383,7 +383,9 @@ img#tovar_dnya {
 }
 /*-----------------*/
 #jumb{
-    background-color: #4D4D4D;
+    height: 100px;
+    margin-top: 20px;
+    background-color: #F89B24;
     color: white;
 }
 .new{
@@ -398,7 +400,8 @@ img#tovar_dnya {
 }
 
 .jumbotron{
-    background-color: #F89B24;
+    margin-top: 50px;
+    background-color: #5cb5e5;
     padding: 8px;
 }
 .shrift{
@@ -443,19 +446,16 @@ p{
 }
 
 /*Footer starts here */
-li {
-    list-style: none;
-    display: inline-block;
-    text-align: center;
-}
 .footer1 {
     text-decoration: none;
     font-size: 3rem;
     color: white;
 
 }
-.jumbotron {
-    background-color: black;
+.jumbotron2 {
+    height: 100%;
+    margin-top: 50px;
+    background-color: #4d4d4d;
 }
 
 span {
