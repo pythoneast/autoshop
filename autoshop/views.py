@@ -1,5 +1,9 @@
 from django.shortcuts import render
+from autoshop.products.models import Product
 
 
 def index(request):
-    return render(request, 'index.html', {})
+    products = Product.objects.all()
+    return render(request, 'index.html', context={
+        'product': products,
+    })

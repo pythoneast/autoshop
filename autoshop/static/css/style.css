@@ -415,28 +415,14 @@ img#tovar_dnya {
     margin-left: 80px;
     margin-top: 70px;
 }
-.card1{
-    background-color: white;
-    margin-top: -29px;
-    margin-right:-10px;
-    margin-left: -22px;
-    }
-.card2{
-    background-color: white;
-    margin-top: -29px;
-    margin-left: -19px;
+
+.card_akcii {
+    background: white;
+    border: 3px solid #ededed;
+    border-radius: 10px;
+    padding: 0 10px 20px 10px;
 }
-.card3{
-    background-color: white;
-    margin-top: -29px;
-    margin-left: -29px;
-}
-.card4{
-    background-color: white;
-    margin-top: -29px;
-    margin-left: -29px;
-    margin-right: -21px;
-}
+
 p{
     font-size: 16px;
 }

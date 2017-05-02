@@ -165,77 +165,25 @@
     <div class="container">
         <div class="row">
             <div class="card-group">
-                <div class="col-md-3">
-                    <div class="card1">
-                        <img class="card-img-top" src="{% static 'image/registr.jpg' %}" alt="Card image cap"
+                {% for p in product %}
+                    <div class="col-md-3 card_akcii">
+                        <img class="card-img-top" src="{{ MEDIA_URL }}{{ p.picture }}" alt="Card image cap"
                              width="150" height="224">
                         <div class="card-block">
                             <h6>Мобильный телефон</h6>
-                            <h4 class="card-title">Iphone 6S 16GB</h4>
+                            <h4 class="card-title">{{ p.title }}</h4>
                             <h5>(черный мат)</h5>
                             <div class="card-footer">
-                                <p><strong>24 500</strong> <i class="fa fa-rub fa-lg" aria-hidden="true"></i>
+                                <p><strong>{{ p.price }}</strong> <i class="fa fa-rub fa-lg" aria-hidden="true"></i>
                                     <a href="path/to/shopping/cart" class="btn btn-warning">
                                         <i class="fa fa-shopping-cart" aria-hidden="true"></i></a></p>
                                 <small class="text-muted">Last updated 3 mins ago</small>
                             </div>
                         </div>
                     </div>
-                </div>
-
-                <div class="col-md-3">
-                    <div class="card2">
-                        <img class="card-img-top" src="{% static 'image/iphone3.jpg' %}" alt="Card image cap">
-                        <div class="card-block">
-                            <h6>Мобильный телефон</h6>
-                            <h4 class="card-title">Iphone 6S 16GB</h4>
-                            <h5>(черный мат)</h5>
-                            <div class="card-footer">
-                                <p><strong>24 500</strong> <i class="fa fa-rub fa-lg" aria-hidden="true"></i>
-                                    <a href="path/to/shopping/cart" class="btn btn-warning">
-                                        <i class="fa fa-shopping-cart" aria-hidden="true"></i></a></p>
-                                <small class="text-muted">Last updated 3 mins ago</small>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="col-md-3">
-                    <div class="card3">
-                        <img class="card-img-top" src="{% static 'image/iphone3.jpg' %}" alt="Card image cap">
-                        <div class="card-block">
-                            <h6>Мобильный телефон</h6>
-                            <h4 class="card-title">Iphone 6S 16GB</h4>
-                            <h5>(черный мат)</h5>
-                            <div class="card-footer">
-                                <p><strong>24 500</strong> <i class="fa fa-rub fa-lg" aria-hidden="true"></i>
-                                    <a href="path/to/shopping/cart" class="btn btn-warning">
-                                        <i class="fa fa-shopping-cart" aria-hidden="true"></i></a></p>
-                                <small class="text-muted">Last updated 3 mins ago</small>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="col-md-3">
-                    <div class="card4">
-                        <img class="card-img-top" src="{% static 'image/iphone3.jpg' %}" alt="Card image cap">
-                        <div class="card-block">
-                            <h6>Мобильный телефон</h6>
-                            <h4 class="card-title">Iphone 6S 16GB</h4>
-                            <h5>(черный мат)</h5>
-                            <div class="card-footer">
-                                <p><strong>24 500</strong> <i class="fa fa-rub fa-lg" aria-hidden="true"></i>
-                                    <a href="path/to/shopping/cart" class="btn btn-warning">
-                                        <i class="fa fa-shopping-cart" aria-hidden="true"></i></a></p>
-                                <small class="text-muted">Last updated 3 mins ago</small>
-                            </div>
-                        </div>
-                    </div>
-                </div>
+                {% endfor %}
             </div>
         </div>
-    </div>
     </div>
 
     <div class="jumbo">
@@ -250,73 +198,23 @@
     <div class="container">
         <div class="row">
             <div class="card-group">
-                <div class="col-md-3">
-                    <div class="card1">
-                        <img class="card-img-top" src="{% static 'image/iphone3.jpg' %}" alt="Card image cap">
+                {% for p in product %}
+                    <div class="col-md-3 card_akcii">
+                        <img class="card-img-top" src="{{ MEDIA_URL }}{{ p.picture }}" alt="Card image cap"
+                             width="150" height="224">
                         <div class="card-block">
                             <h6>Мобильный телефон</h6>
-                            <h4 class="card-title">Iphone 6S 16GB</h4>
+                            <h4 class="card-title">{{ p.title }}</h4>
                             <h5>(черный мат)</h5>
                             <div class="card-footer">
-                                <p><strong>24 500</strong> <i class="fa fa-rub fa-lg" aria-hidden="true"></i>
+                                <p><strong>{{ p.price }}</strong> <i class="fa fa-rub fa-lg" aria-hidden="true"></i>
                                     <a href="path/to/shopping/cart" class="btn btn-warning">
                                         <i class="fa fa-shopping-cart" aria-hidden="true"></i></a></p>
                                 <small class="text-muted">Last updated 3 mins ago</small>
                             </div>
                         </div>
                     </div>
-                </div>
-            </div>
-
-            <div class="col-md-3">
-                <div class="card2">
-                    <img class="card-img-top" src="{% static 'image/iphone3.jpg' %}" alt="Card image cap">
-                    <div class="card-block">
-                        <h6>Мобильный телефон</h6>
-                        <h4 class="card-title">Iphone 6S 16GB</h4>
-                        <h5>(черный мат)</h5>
-                        <div class="card-footer">
-                            <p><strong>24 500</strong> <i class="fa fa-rub fa-lg" aria-hidden="true"></i>
-                                <a href="path/to/shopping/cart" class="btn btn-warning">
-                                    <i class="fa fa-shopping-cart" aria-hidden="true"></i></a></p>
-                            <small class="text-muted">Last updated 3 mins ago</small>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-            <div class="col-md-3">
-                <div class="card3">
-                    <img class="card-img-top" src="{% static 'image/iphone3.jpg' %}" alt="Card image cap">
-                    <div class="card-block">
-                        <h6>Мобильный телефон</h6>
-                        <h4 class="card-title">Iphone 6S 16GB</h4>
-                        <h5>(черный мат)</h5>
-                        <div class="card-footer">
-                            <p><strong>24 500</strong> <i class="fa fa-rub fa-lg" aria-hidden="true"></i>
-                                <a href="path/to/shopping/cart" class="btn btn-warning">
-                                    <i class="fa fa-shopping-cart" aria-hidden="true"></i></a></p>
-                            <small class="text-muted">Last updated 3 mins ago</small>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-            <div class="col-md-3">
-                <div class="card4">
-                    <img class="card-img-top" src="{% static 'image/iphone3.jpg' %}" alt="Card image cap">
-                    <div class="card-block">
-                        <h6>Мобильный телефон</h6>
-                        <h4 class="card-title">Iphone 6S 16GB</h4>
-                        <h5>(черный мат)</h5>
-                        <div class="card-footer">
-                            <p><strong>24 500</strong> <i class="fa fa-rub fa-lg" aria-hidden="true"></i>
-                                <a href="path/to/shopping/cart" class="btn btn-warning">
-                                    <i class="fa fa-shopping-cart" aria-hidden="true"></i></a></p>
-                            <small class="text-muted">Last updated 3 mins ago</small>
-                        </div>
-                    </div>
-                </div>
+                {% endfor %}
             </div>
         </div>
     </div>
