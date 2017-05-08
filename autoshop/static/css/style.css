@@ -381,20 +381,29 @@ img#tovar_dnya {
 .cart_top {
     float: left;
 }
+
 /*-----------------*/
 #jumb{
     height: 100px;
-    margin-top: 20px;
+    margin-top: 50px;
     background-color: #F89B24;
     color: white;
 }
-.new{
 
+.new{
+    padding-left: 20px;
     font-size: 30px;
 }
+
+.new1{
+    padding-left: 20px;
+    font-size: 30px;
+}
+
 .arrow{
     margin-left: 10px;
 }
+
 .card-block{
     text-align: center;
 }
@@ -404,13 +413,16 @@ img#tovar_dnya {
     background-color: #5cb5e5;
     padding: 8px;
 }
+
 .shrift{
     color: white;
 }
+
 .btn-warning{
     border-radius: 65%; 
     margin-left: 10px;
 }
+
 .card-img-top{
     margin-left: 80px;
     margin-top: 70px;
@@ -418,9 +430,15 @@ img#tovar_dnya {
 
 .card_akcii {
     background: white;
-    border: 3px solid #ededed;
-    border-radius: 10px;
+    border: 5px solid #ededed;
+    border-radius: 20px;
     padding: 0 10px 20px 10px;
+}
+
+.card_akcii:hover {
+    transition: 0.9s all;
+    background: white;
+    border: 5px solid #F89B24;
 }
 
 p{
@@ -434,23 +452,27 @@ p{
 /*Footer starts here */
 .footer1 {
     text-decoration: none;
-    font-size: 3rem;
+    font-size: 25px;
+    font-family: "Times New Roman", serif;
+    font-style: italic;
     color: white;
 
 }
 .jumbotron2 {
+    padding: 30px 50px;
     height: 100%;
-    margin-top: 50px;
-    background-color: #4d4d4d;
+    margin-top: 20px;
+    background: black;
 }
 
 span {
-    font-size: 2rem;
+    font-size:20px;
     color: white;
 }
 
 .icon-style {
     color: white;
+    font-size: 15px;
 }
 .logo {
     margin-left: 40rem;
@@ -460,10 +482,44 @@ span {
     margin-left: 11rem;
 }
 .link {
-    color: white;
-
+    color: #808080;
     margin-left: 5rem;
 }
 .img1 {
     margin-left: 5rem;
+}
+
+a.eliza {
+    text-decoration: none;
+    color: white;
+}
+
+a.eliza:hover {
+    color: #F89B24;
+}
+
+li.spisok {
+    margin-left: 69px;
+}
+
+i.ikonki {
+    margin-right: 30px;
+    color: white;
+}
+
+i.ikonki:hover {
+    color: #f89b24;
+}
+
+.pagin {
+    color: black;
+    font-weight: bold;
+}
+
+.pagin:hover {
+    color: #ec971f;
+}
+
+.pagination {
+    margin-left: auto;
 }

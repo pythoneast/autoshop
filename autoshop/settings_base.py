@@ -42,6 +42,8 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
 
     'autoshop.products',
+    'autoshop.categories',
+    'smart_selects',
 ]
 
 if DEBUG:
@@ -59,6 +61,8 @@ MIDDLEWARE = [
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
     'debug_toolbar.middleware.DebugToolbarMiddleware',
     ]
+
+SMART_SELECTS_JQUERY_URL = True
 
 ROOT_URLCONF = 'autoshop.urls'
 

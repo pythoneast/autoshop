@@ -1,0 +1,135 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block page_title %}
+    Product: {{ product.title }}
+{% endblock page_title %}
+{% block css %}
+    <style>
+        article {
+            padding-top: 0;
+        }
+
+        .jumbotron2 {
+            margin-top: 0;
+        }
+
+        select{
+            padding-left: 10px;
+            background: #edeeef;
+            width: 60%;
+            height: 38px;
+            margin-left: 150px;
+            border-radius: 4px;
+            border: 2px solid rgba(208, 209, 202, 0.5);
+            font-weight: bold;
+            font-size: 15px;
+        }
+
+        .klass {
+            padding: 0px 100px;
+        }
+
+        .opisanie {
+            border-right:  1px solid rgba(214, 217, 219, 0.8);
+        }
+
+        .kontent {
+            margin-top: 20px;
+        }
+
+        .obertka {
+            margin-right: 10px;
+            margin-top: 20px;
+            margin-bottom: 20px;
+        }
+
+    </style>
+{% endblock css %}
+{% block article %}
+
+    <div class="container-fluid obertka">
+        <div class="row">
+            <div class="col-sm-2 categories side">
+                <ul class="menu">
+                    {% for c in categories %}
+                        <li class="menu__list"><a class="menu_link" href="{% url 'cat_list' c.id %}">{{ c.title }}</a>
+                            <ul class="menu__drop">
+                                {% for s in subcategories %}
+                                    {% if s.category == c %}
+                                        <li><a class="menu_link" href="{% url 'subcat_list' c.id s.id %}">{{ s.title }}</a></li>
+                                    {% endif %}
+                                {% endfor %}
+                            </ul>
+                        </li>
+                    {% endfor %}
+                </ul>
+            </div>
+            <div class="col-sm-10" style="background: white; padding: 10px 20px;">
+                <div class="klass">
+                <div class="row">
+                    <div class="col-sm-12"><h2 style="font-size: 24px;font-weight: bold;" class="text">{{ current_category }}{% if current_subcategory %} / {{ current_subcategory }}{% endif %}</h2>
+                    <hr style="border: 1px solid rgba(214, 217, 219, 0.8);">
+                </div>
+                <div class="row">
+                    <div class="col-sm-6">
+                      <select class="selectpicker show-tick left">
+                        <span class="font">
+                            <option>По цене ▲</option>
+                            <option>По цене ▼</option>
+                            <option>По популярности ▲</option>
+                            <option>По популярности ▼</option>
+                        </span>
+                      </select>
+                    </div>
+			<div class="col-sm-6">
+			  <select class="selectpicker show-tick">
+			  	<span class="font">
+				    <option>Бренды</option>
+				    <option>Sony</option>
+				    <option>Panasonic</option>
+				    <option>Beko</option>
+				</span>
+			  </select>
+			</div>
+		</div>
+        {% for p in products %}
+            <div class="row tovar">
+            <hr style="border: 1px solid rgba(214, 217, 219, 0.8);">
+                <div class="col-sm-4 kartinka">
+                    <img  src="{{ MEDIA_URL }}{{ p.picture }}" style="max-height: 200px; width: auto">
+                </div>
+                <div class="col-sm-4 opisanie">
+                    <a href="{% url 'product-detail' p.id %}">
+                        <p style="font-size: 19px;font-weight: bold;">{{ p.category }} / {{ p.subcategories }} / {{ p.title }}</p>
+                    </a>
+                    <ul>
+                        <li style="list-style-type: none">{{ p.description }}</li>
+                    </ul>
+                </div>
+                <div class="col-sm-4 kontent" >
+                    <h2 style="font-weight: bold;">{{ p.price }} <i class="fa fa-rub"></i>
+                    </h2>
+                        <a href="path/to/shopping/cart" class="btn btn-danger" style="float:  right; margin-top: -45px;margin-right: 70px;">
+                          <i style="font-size: 25px; margin: -4px 10px;" class="fa fa-shopping-cart" aria-hidden="true"></i></a></p>
+                         <hr style= "border: 1px solid rgba(214, 217, 219, 0.8);">
+                    <i class="fa fa-car" aria-hidden="true"><h5 style="margin-top: -15px; margin-left: 20px;font-weight: bold;">Доставка на дом</h5></i>
+                    <h6 style="margin-top: -22px; margin-left: 160px;">Цена: 250с</h6>
+                </div>
+            </div>
+        {% endfor %}
+        <div class="pagination">
+            <span class="step-links" style="color: black;">
+                {% if products.has_previous %}
+                    <a class="pagin" href="?page={{ products.previous_page_number }}">previous</a> |
+                {% endif %}
+
+                <span class="current" style="color:black">
+                    Page {{ products.number }} of {{ products.paginator.num_pages }}                 </span>
+
+                {% if products.has_next %}
+                    | <a class="pagin" href="?page={{ products.next_page_number }}">next</a>
+                {% endif %}
+            </span>
+        </div>
+    </div>
+{% endblock article %}

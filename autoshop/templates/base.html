@@ -10,6 +10,7 @@
     <link rel="stylesheet" type="text/css" href="{% static 'slick/slick.css' %}" />
     <link rel="stylesheet" type="text/css" href="{% static 'slick/slick-theme.css' %}" />
     <link rel="stylesheet" type="text/css" href="{% static 'css/style.css' %}">
+    {% block css %}{% endblock css %}
     <title>{% block page_title %}{% endblock page_title %}</title>
 </head>
 
@@ -17,16 +18,18 @@
     <header>
         <div class="container-fluid">
             <div class="row">
-                <div class="col-sm-12 top_header nopadding">
-                    <div class="col-sm-3 col-lg-3">
-                        <img src="{% static 'image/logo.png' %}" height="60" width="300" />
+                <div class="top_header nopadding">
+                    <div class="col-xs-12 col-sm-6 col-md-3">
+                        <a href="{% url 'index-main' %}">
+                            <img src="{% static 'image/logo.png' %}" height="60" width="300" />
+                        </a>
                     </div>
-                    <div class="col-sm-3 search">
+                    <div class="hidden-xs hidden-sm col-md-3 search">
                         <input style="float:left" type="search" class="form-control" id="">
                         <i style="position:absolute; float:right; margin-top: 9px; margin-left: -25px" class="fa fa-search fa-lg" area-hidden="true"></i>
                     </div>
                     <a href="">
-                        <div class="col-sm-2 authenticate">
+                        <div class="hidden-xs col-sm-2 col-md-2 authenticate">
                             <i class="fa fa-user-circle-o fa-3x" style="color:#faac3d"></i>
                             <p class="user-auth">
                                 Username
@@ -34,7 +37,7 @@
                         </div>
                     </a>
                     <a href="">
-                        <div class="col-sm-2 cart">
+                        <div class="hidden-xs hidden-sm col-md-2 cart">
                             <i class="fa fa-cart-arrow-down fa-3x" style="color:#faac3d"></i>
                             <p class="user-cart">
                                 Корзина
@@ -42,7 +45,7 @@
                         </div>
                     </a>
                     <a href="">
-                        <div class="col-sm-2 number">
+                        <div class="col-xs-12 col-sm-3 col-md-2 number">
                             <i class="fa fa-phone-square fa-3x" style="color:#faac3d"></i>
                             <p class="mobile">
                                 0708 415 277
@@ -55,33 +58,33 @@
             <div class="row">
                 <div class="col-sm-12 bottom_header nopadding">
                     <a href="#" onclick="return false">
-                        <div class="col-sm-2 catalog">
+                        <div class="col-xs-12 col-sm-2 catalog">
                             <i class="fa fa-bars fa-2x"></i>
                             <p class="katalog">Каталог товаров</p>
                         </div>
                     </a>
                     <a href="">
-                        <div class="col-sm-2 akcii">
+                        <div class="hidden-xs col-sm-2 akcii">
                             <p>Акции и скидки</p>
                         </div>
                     </a>
                     <a href="">
-                        <div class="col-sm-2 akcii">
+                        <div class="hidden-xs col-sm-2 akcii">
                             <p>Доставка и оплата</p>
                         </div>
                     </a>
                     <a href="">
-                        <div class="col-sm-2 akcii">
+                        <div class="hidden-xs col-sm-2 akcii">
                             <p>Местоположение</p>
                         </div>
                     </a>
                     <a href="">
-                        <div class="col-sm-2 akcii">
+                        <div class="hidden-xs col-sm-2 akcii">
                             <p>Отзывы и комментарии</p>
                         </div>
                     </a>
                     <a href="">
-                        <div class="col-sm-2 akcii">
+                        <div class="hidden-xs col-sm-2 akcii">
                             <p>О компании</p>
                         </div>
                     </a>
@@ -98,7 +101,7 @@
             <div class="row">
              	<div class="col-md-4">
                 	<ul style="list-style-type: none">
-                        <li><a href="#" class="footer1" >Наши контакты</a></li>
+                        <li><a href="#" class="footer1 eliza">Наши контакты</a></li>
                         <li>
                         	<i class="fa fa-phone fa-lg icon-style" aria-hidden="true"></i>
                         	<span class = "icon-style"> Телефон: + 996 312 61 01 01 </span>
@@ -115,33 +118,36 @@
              	</div>
                 <div class="col-md-4">
                     <ul style="list-style-type: none">
-                        <li style="text-align: center"><a href="#" class="footer1" >Мы в социальных сетях</a></li>
-{#                        <li style="margin-left: 22px">#}
-{#                        	<img src="{% static 'image/logo_elsom.png' %}" class="elsom" width="100" height="100">#}
-{#                        </li>#}
+                        <li style="text-align: center"><a href="#" class="footer1 eliza" >Мы в социальных сетях</a></li>
                         <li>
-                        	<div style="margin-top: 10px; margin-left: 60px">
-	                        	<i style="margin-right: 30px; color: white;" class="fa fa-facebook-square fa-5x"></i>
-	                        	<i style="margin-right: 30px; color: white;" class="fa fa-instagram fa-5x"></i>
-	                        	<i style="color: white;" class="fa fa-google-plus-square fa-5x" aria-hidden="true"></i>
+                        	<div style="margin-top: 10px; margin-left: 110px">
+	                        	<a href="">
+                                    <i class="fa fa-facebook-square fa-2x ikonki"></i>
+                                </a>
+                                <a href="">
+    	                        	<i class="fa fa-instagram fa-2x ikonki"></i>
+                                </a>
+                                <a href="">
+    	                        	<i class="fa fa-google-plus-square fa-2x ikonki" aria-hidden="true"></i>
+                                </a>
 	                        </div>
                         </li>
                     </ul>
                 </div>
                 <div class="col-md-4">
                     <ul style="list-style-type: none">
-                        <li style="text-align: center;"><a href="#" class="footer1">Помощь покупателю</a></li>
-                        <li>
-                        	<a href="#" class="link">Гарантия</a>
+                        <li style="text-align: center;"><a href="#" class="footer1 eliza">Помощь покупателю</a></li>
+                        <li class="spisok">
+                            <span class="icon-style"><a class="eliza" href="#">Гарантия</a></span>
                         </li>
-                        <li>
-                        	<a href="#" class="link">Статус ремонта</a>
+                        <li class="spisok">
+                            <span class="icon-style"><a class="eliza" href="#">Статус ремонтаc</a></span>
                         </li>
-                        <li>
-                        	<a href="#" class="link"> Адреса сервисных центров </a>
+                        <li class="spisok">
+                            <span class="icon-style"><a class="eliza" href="#"> Адреса сервисных центров </a></span>
                      	</li>
-                     	<li>
-                        	<a href="#" class="link"> Дополнительные услуги и сервис </a>
+                     	<li class="spisok">
+                            <span class="icon-style"><a class="eliza" href="#"> Дополнительные услуги и сервис </a></span>
                         </li>
                     </ul>
                 </div>

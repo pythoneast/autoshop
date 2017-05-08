@@ -1,110 +1,26 @@
 {% extends 'base.html' %}
 {% load static %}
-
+{% block page_title %}Магазин автотовар{% endblock page_title %}
 {% block article %}
-    <div class="container-fluid">
+    <p id="expire_date" data-expire="{{ day_product.last.expire_date|date:'M d, Y H:i:s' }}" style="display: none"></p>
+    <div class="container-fluid kaplayan">
         <div class="row">
-            <div class="col-sm-2 categories side">
+            <div class="hidden-xs col-sm-2 categories side">
                 <ul class="menu">
-                    <li class="menu__list"><a class="menu_link" href="#">Видеорегистраторы</a>
-                        <ul class="menu__drop" id="drop1">
-                            <li><a class="menu_link" href="#">Subcategory #</a></li>
-                            <li><a class="menu_link" href="#">Subcategory #</a></li>
-                            <li><a class="menu_link" href="#">Subcategory #</a></li>
-                            <li><a class="menu_link" href="#">Subcategory #</a></li>
-                            <li><a class="menu_link" href="#">Subcategory #</a></li>
-                            <li><a class="menu_link" href="#">Subcategory #</a></li>
-                            <li><a class="menu_link" href="#">Subcategory #</a></li>
-                            <li><a class="menu_link" href="#">Subcategory #</a></li>
-                        </ul>
-                    </li>
-                    <li class="menu__list"><a class="menu_link" href="#">Аудио</a>
-                        <ul class="menu__drop" id="drop2">
-                            <li><a class="menu_link" href="#">Усилители</a></li>
-                            <li><a class="menu_link" href="#">Магнитолы</a></li>
-                            <li><a class="menu_link" href="#">Колонки</a></li>
-                            <li><a class="menu_link" href="#">Сабвуферы</a></li>
-                            <li><a class="menu_link" href="#">FM модули</a></li>
-                            <li><a class="menu_link" href="#">Subcategory #</a></li>
-                            <li><a class="menu_link" href="#">Subcategory #</a></li>
-                            <li><a class="menu_link" href="#">Subcategory #</a></li>
-                        </ul>
-                    </li>
-                    <li class="menu__list"><a class="menu_link" href="#">Сигнализации</a>
-                        <ul class="menu__drop" id="drop3">
-                            <li><a class="menu_link" href="#">Subcategory #</a></li>
-                            <li><a class="menu_link" href="#">Subcategory #</a></li>
-                            <li><a class="menu_link" href="#">Subcategory #</a></li>
-                            <li><a class="menu_link" href="#">Subcategory #</a></li>
-                            <li><a class="menu_link" href="#">Subcategory #</a></li>
-                            <li><a class="menu_link" href="#">Subcategory #</a></li>
-                            <li><a class="menu_link" href="#">Subcategory #</a></li>
-                            <li><a class="menu_link" href="#">Subcategory #</a></li>
-                        </ul>
-                    </li>
-                    <li class="menu__list"><a class="menu_link" href="#">Навигаторы</a>
-                        <ul class="menu__drop" id="drop4">
-                            <li><a class="menu_link" href="#">Subcategory #</a></li>
-                            <li><a class="menu_link" href="#">Subcategory #</a></li>
-                            <li><a class="menu_link" href="#">Subcategory #</a></li>
-                            <li><a class="menu_link" href="#">Subcategory #</a></li>
-                            <li><a class="menu_link" href="#">Subcategory #</a></li>
-                            <li><a class="menu_link" href="#">Subcategory #</a></li>
-                            <li><a class="menu_link" href="#">Subcategory #</a></li>
-                            <li><a class="menu_link" href="#">Subcategory #</a></li>
-                        </ul>
-                    </li>
-                    <li class="menu__list"><a class="menu_link" href="#">Оптика</a>
-                        <ul class="menu__drop" id="drop5">
-                            <li><a class="menu_link" href="#">Subcategory #</a></li>
-                            <li><a class="menu_link" href="#">Subcategory #</a></li>
-                            <li><a class="menu_link" href="#">Subcategory #</a></li>
-                            <li><a class="menu_link" href="#">Subcategory #</a></li>
-                            <li><a class="menu_link" href="#">Subcategory #</a></li>
-                            <li><a class="menu_link" href="#">Subcategory #</a></li>
-                            <li><a class="menu_link" href="#">Subcategory #</a></li>
-                            <li><a class="menu_link" href="#">Subcategory #</a></li>
-                        </ul>
-                    </li>
-                    <li class="menu__list"><a class="menu_link" href="#">Все для парковки</a>
-                        <ul class="menu__drop" id="drop6">
-                            <li><a class="menu_link" href="#">Subcategory #</a></li>
-                            <li><a class="menu_link" href="#">Subcategory #</a></li>
-                            <li><a class="menu_link" href="#">Subcategory #</a></li>
-                            <li><a class="menu_link" href="#">Subcategory #</a></li>
-                            <li><a class="menu_link" href="#">Subcategory #</a></li>
-                            <li><a class="menu_link" href="#">Subcategory #</a></li>
-                            <li><a class="menu_link" href="#">Subcategory #</a></li>
-                            <li><a class="menu_link" href="#">Subcategory #</a></li>
-                        </ul>
-                    </li>
-                    <li class="menu__list"><a class="menu_link" href="#">Разное</a>
-                        <ul class="menu__drop" id="drop7">
-                            <li><a class="menu_link" href="#">Subcategory #</a></li>
-                            <li><a class="menu_link" href="#">Subcategory #</a></li>
-                            <li><a class="menu_link" href="#">Subcategory #</a></li>
-                            <li><a class="menu_link" href="#">Subcategory #</a></li>
-                            <li><a class="menu_link" href="#">Subcategory #</a></li>
-                            <li><a class="menu_link" href="#">Subcategory #</a></li>
-                            <li><a class="menu_link" href="#">Subcategory #</a></li>
-                            <li><a class="menu_link" href="#">Subcategory #</a></li>
-                        </ul>
-                    </li>
-                    <li class="menu__list"><a class="menu_link" href="#">Category 8</a>
-                        <ul class="menu__drop" id="drop8">
-                            <li><a class="menu_link" href="#">Subcategory #</a></li>
-                            <li><a class="menu_link" href="#">Subcategory #</a></li>
-                            <li><a class="menu_link" href="#">Subcategory #</a></li>
-                            <li><a class="menu_link" href="#">Subcategory #</a></li>
-                            <li><a class="menu_link" href="#">Subcategory #</a></li>
-                            <li><a class="menu_link" href="#">Subcategory #</a></li>
-                            <li><a class="menu_link" href="#">Subcategory #</a></li>
-                            <li><a class="menu_link" href="#">Subcategory #</a></li>
-                        </ul>
-                    </li>
+                    {% for c in category %}
+                        <li class="menu__list"><a class="menu_link" href="{% url 'cat_list' c.id %}">{{ c.title }}</a>
+                            <ul class="menu__drop">
+                                {% for s in subcategory %}
+                                    {% if s.category == c %}
+                                        <li><a class="menu_link" href="{% url 'subcat_list' c.id s.id %}">{{ s.title }}</a></li>
+                                    {% endif %}
+                                {% endfor %}
+                            </ul>
+                        </li>
+                    {% endfor %}
                 </ul>
             </div>
-            <div class="col-sm-6 slider">
+            <div class="hidden-xs col-sm-6 slider">
                 <div class="slide_show">
                     <div class="slide">
                         <a href="">
@@ -135,17 +51,22 @@
                     </div>
                 </div>
             </div>
-            <div class="col-sm-4 product_of_the_day">
+            <div class="hidden-xs col-sm-4 product_of_the_day">
                 <div class="tovar_dnya">
                     <h3 id="good_price_title">Товар дня</h3>
                     <p id="demo"></p>
-                    <img id="tovar_dnya" src="{% static 'image/product_of_the_day.jpg' %}" height="auto" width="300px"/>
-                    <p>Видеорегистратор</p>
-                    <p style="font-size:24px"><b>Artway AV-600</b></p>
+                    <a href="{% url 'product-detail' day_product.last.id %}">
+                        <img id="tovar_dnya" src="{{ MEDIA_URL }}{{ day_product.last.picture }}" height="200" width="auto"/>
+                    </a>
+                    <a href="{% url 'product-detail' day_product.last.id %}">
+                        <p style="font-size:24px"><b>{{ day_product.last.title }}</b></p>
+                    </a>
+                    <p>Осталось: <span style="color: red; font-weight: bold; font-size: 20px;">{{ day_product.last.quantity }} ед.</span></p>
                     <div class="price_top">
-                        <p style="font-size: 28px;"><span
-                                style="text-decoration: line-through; font-size: 24px">3 290</span>
-                            <br/> 3 090 сом</p>
+                        <p style="font-size: 28px;">
+                            <span style="text-decoration: line-through; font-size: 24px; color: grey">{{ day_product.last.price }}</span>
+                            <br/>
+                            {{ day_product.last.discounted_price }}</p>
                     </div>
                     <div class="cart_top">
                         <a href="">
@@ -159,23 +80,27 @@
     <!--- ---------------- -->
 
     <div class="jumbotron" id="jumb">
-        <h2 class="new">Новинки и Спецпредложения <i class="fa fa-arrow-circle-right fa-lg arrow"
+        <h2 class="new">Акции и Спецпредложения <i class="hidden-xs fa fa-arrow-circle-right fa-lg arrow"
                                                      aria-hidden="true"></i></h2>
     </div>
     <div class="container">
         <div class="row">
             <div class="card-group">
-                {% for p in product %}
+                {% for d in discount %}
                     <div class="col-md-3 card_akcii">
-                        <img class="card-img-top" src="{{ MEDIA_URL }}{{ p.picture }}" alt="Card image cap"
+                        <a href="{% url 'product-detail' d.id %}">
+                            <img class="card-img-top" src="{{ MEDIA_URL }}{{ d.picture }}" alt="Card image cap"
                              width="150" height="224">
+                        </a>
                         <div class="card-block">
                             <h6>Мобильный телефон</h6>
-                            <h4 class="card-title">{{ p.title }}</h4>
-                            <h5>(черный мат)</h5>
+                            <a href="{% url 'product-detail' d.id %}">
+                                <h4 class="card-title">{{ d.title }}</h4>
+                                <h5>(черный мат)</h5>
+                            </a>
                             <div class="card-footer">
-                                <p><strong>{{ p.price }}</strong> <i class="fa fa-rub fa-lg" aria-hidden="true"></i>
-                                    <a href="path/to/shopping/cart" class="btn btn-warning">
+                                <p><strong><span style="text-decoration: line-through; color: grey">{{ d.price }}</span> {{ d.discounted_price }}</strong> <i class="fa fa-rub fa-lg" aria-hidden="true"></i>
+                                    <a href="{% url 'product-detail' d.id %}" class="btn btn-warning">
                                         <i class="fa fa-shopping-cart" aria-hidden="true"></i></a></p>
                                 <small class="text-muted">Last updated 3 mins ago</small>
                             </div>
@@ -189,8 +114,7 @@
     <div class="jumbo">
         <div class="jumbotron">
     <span class="shrift">
-      <h2 class="new1">Видео Регистраторы <i class="fa fa-arrow-circle-right fa-lg arrow" aria-hidden="true"></i></h2>
-        <h5>Новинки и бестселлеры</h5>
+        <h2 class="new1">Новинки Товаров<i class="fa fa-arrow-circle-right fa-lg arrow" aria-hidden="true"></i></h2>
     </span>
         </div>
     </div>
@@ -198,18 +122,24 @@
     <div class="container">
         <div class="row">
             <div class="card-group">
-                {% for p in product %}
+                {% for n in new_product %}
                     <div class="col-md-3 card_akcii">
-                        <img class="card-img-top" src="{{ MEDIA_URL }}{{ p.picture }}" alt="Card image cap"
-                             width="150" height="224">
+                        <a href="{% url 'product-detail' n.id %}">
+                            <img class="card-img-top" src="{{ MEDIA_URL }}{{ n.picture }}" alt="Card image cap"
+                                 width="150" height="224">
+                        </a>
                         <div class="card-block">
                             <h6>Мобильный телефон</h6>
-                            <h4 class="card-title">{{ p.title }}</h4>
-                            <h5>(черный мат)</h5>
+                            <a href="{% url 'product-detail' n.id %}">
+                                <h4 class="card-title">{{ n.title }}</h4>
+                                <h5>(черный мат)</h5>
+                            </a>
                             <div class="card-footer">
-                                <p><strong>{{ p.price }}</strong> <i class="fa fa-rub fa-lg" aria-hidden="true"></i>
-                                    <a href="path/to/shopping/cart" class="btn btn-warning">
-                                        <i class="fa fa-shopping-cart" aria-hidden="true"></i></a></p>
+                                <p><strong>{{ n.price }}</strong> <i class="fa fa-rub fa-lg" aria-hidden="true"></i>
+                                    <a href="{% url 'product-detail' n.id %}" class="btn btn-warning">
+                                        <i class="fa fa-shopping-cart" aria-hidden="true"></i>
+                                    </a>
+                                </p>
                                 <small class="text-muted">Last updated 3 mins ago</small>
                             </div>
                         </div>
