@@ -14,7 +14,12 @@ def cat_list(request, cat_id):
     current_category = Category.objects.get(id=cat_id)
 
     products = Product.objects.filter(category_id=cat_id)
-    paginator = Paginator(products, 3)  # Show 25 contacts per page
+
+    sort_by = request.GET.get('order_by')
+    if sort_by:
+        products = products.order_by(sort_by)
+
+    paginator = Paginator(products, 7)  # Show 25 contacts per page
 
     page = request.GET.get('page')
     try:
@@ -36,7 +41,7 @@ def subcat_list(request, cat_id, subcat_id):
     current_subcategory = Subcategory.objects.get(id=subcat_id)
 
     products = Product.objects.filter(subcategories=subcat_id)
-    paginator = Paginator(products, 3)  # Show 25 contacts per page
+    paginator = Paginator(products, 7)  # Show 7 contacts per page
 
     page = request.GET.get('page')
     try:

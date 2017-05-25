@@ -43,6 +43,7 @@ INSTALLED_APPS = [
 
     'autoshop.products',
     'autoshop.categories',
+    'autoshop.users',
     'smart_selects',
 ]
 
@@ -60,6 +61,11 @@ MIDDLEWARE = [
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
     'debug_toolbar.middleware.DebugToolbarMiddleware',
+    ]
+
+if DEBUG:
+    MIDDLEWARE = [
+        'debug_toolbar.middleware.DebugToolbarMiddleware',
     ]
 
 SMART_SELECTS_JQUERY_URL = True
@@ -90,6 +96,7 @@ TEMPLATES = [
 
 WSGI_APPLICATION = 'autoshop.wsgi.application'
 
+AUTH_USER_MODEL = 'users.User'
 
 # Password validation
 # https://docs.djangoproject.com/en/1.11/ref/settings/#auth-password-validators

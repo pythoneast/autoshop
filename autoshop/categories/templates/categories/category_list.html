@@ -15,10 +15,10 @@
 
         select{
             padding-left: 10px;
+            margin-top: 15px;
             background: #edeeef;
             width: 60%;
             height: 38px;
-            margin-left: 150px;
             border-radius: 4px;
             border: 2px solid rgba(208, 209, 202, 0.5);
             font-weight: bold;
@@ -67,36 +67,28 @@
             <div class="col-sm-10" style="background: white; padding: 10px 20px;">
                 <div class="klass">
                 <div class="row">
-                    <div class="col-sm-12"><h2 style="font-size: 24px;font-weight: bold;" class="text">{{ current_category }}{% if current_subcategory %} / {{ current_subcategory }}{% endif %}</h2>
-                    <hr style="border: 1px solid rgba(214, 217, 219, 0.8);">
-                </div>
-                <div class="row">
                     <div class="col-sm-6">
-                      <select class="selectpicker show-tick left">
+                        <h2 style="font-size: 24px;font-weight: bold;" class="text">{{ current_category }}{% if current_subcategory %} / {{ current_subcategory }}{% endif %}</h2>
+                    </div>
+                    <div class="col-sm-6">
+                      <form id="form-order-by">
+                      <select id="order_by" name="order_by" class="selectpicker show-tick left">
                         <span class="font">
-                            <option>По цене ▲</option>
-                            <option>По цене ▼</option>
-                            <option>По популярности ▲</option>
-                            <option>По популярности ▼</option>
+                            <option class="sorting" {% if sort_by == '1' %}selected {% endif %}value="">По популярности ▲</option>
+                            <option class="sorting" {% if sort_by == '2' %}selected {% endif %}value="">По популярности ▼</option>
+                            <option class="sorting" {% if sort_by == 'price' %}selected {% endif %}value="price">По цене ▲</option>
+                            <option class="sorting" {% if sort_by == '-price' %}selected {% endif %}value="-price">По цене ▼</option>
                         </span>
                       </select>
+                      </form>
                     </div>
-			<div class="col-sm-6">
-			  <select class="selectpicker show-tick">
-			  	<span class="font">
-				    <option>Бренды</option>
-				    <option>Sony</option>
-				    <option>Panasonic</option>
-				    <option>Beko</option>
-				</span>
-			  </select>
-			</div>
-		</div>
+                </div>
+            </div>
         {% for p in products %}
             <div class="row tovar">
             <hr style="border: 1px solid rgba(214, 217, 219, 0.8);">
                 <div class="col-sm-4 kartinka">
-                    <img  src="{{ MEDIA_URL }}{{ p.picture }}" style="max-height: 200px; width: auto">
+                    <img src="{{ MEDIA_URL }}{{ p.picture }}" style="max-height: 200px; width: auto">
                 </div>
                 <div class="col-sm-4 opisanie">
                     <a href="{% url 'product-detail' p.id %}">

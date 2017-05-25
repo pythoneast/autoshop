@@ -35,4 +35,9 @@ $(document).ready(function() {
             $("demo").html("EXPIRED");
         }
     }, 1000);
+
+    $('#order_by').change(function () {
+        $('#form-order-by').submit();
+
+    });
 });
