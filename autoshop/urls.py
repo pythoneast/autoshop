@@ -20,10 +20,11 @@ from autoshop import views
 from django.conf.urls.static import static
 
 urlpatterns = [
+    url(r'^$', views.index, name='index-main'),
     url(r'^admin/', admin.site.urls),
     url(r'^chaining/', include('smart_selects.urls')),
-    url(r'^$', views.index, name='index-main'),
     url(r'^products/', include('autoshop.products.urls')),
+    url(r'^users/', include ('autoshop.users.urls')),
     url(r'^catalog/', include('autoshop.categories.urls')),
 ] + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
 
