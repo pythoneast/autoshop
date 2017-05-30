@@ -18,6 +18,7 @@ from django.contrib import admin
 from django.conf import settings
 from autoshop import views
 from django.conf.urls.static import static
+from autoshop.sign import views as sign_views
 
 urlpatterns = [
     url(r'^admin/', admin.site.urls),
@@ -25,6 +26,9 @@ urlpatterns = [
     url(r'^$', views.index, name='index-main'),
     url(r'^products/', include('autoshop.products.urls')),
     url(r'^catalog/', include('autoshop.categories.urls')),
+    url(r'^sign-in/$', sign_views.signin, name='signin'),
+    url(r'^sign-up/$', sign_views.signup, name='signup'),
+    url(r'^sign-out/$', sign_views.signout, name='signout'),
 ] + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
 
 if settings.DEBUG:

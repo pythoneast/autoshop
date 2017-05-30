@@ -1,7 +1,7 @@
 # -*- coding: utf-8 -*-
 from __future__ import unicode_literals
-
 from django.contrib.auth.base_user import AbstractBaseUser
+from django.contrib.auth.models import PermissionsMixin
 from django.db import models
 from django.utils import timezone
 
@@ -35,7 +35,8 @@ class MyUserManager(models.Manager):
     def get_by_natural_key(self, username):
         return self.get(**{self.model.USERNAME_FIELD: username})
 
-class User(AbstractBaseUser):
+
+class User(AbstractBaseUser, PermissionsMixin):
     email = models.EmailField(unique=True)
     USERNAME_FIELD = 'email'
     first_name = models.CharField(max_length=25, blank=True)
@@ -43,7 +44,6 @@ class User(AbstractBaseUser):
     number = models.CharField(max_length=10, blank=True)
     date_joined = models.DateTimeField(default=timezone.now)
     is_staff = models.BooleanField(default=False)
-    is_superuser = models.BooleanField(default=False)
 
     objects = MyUserManager()
 

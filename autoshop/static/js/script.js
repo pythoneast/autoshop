@@ -11,8 +11,9 @@ $(document).ready(function() {
     // Set the date we're counting down to
     var expire_date = $('#expire_date').data('expire');
     var countDownDate = new Date(expire_date).getTime();
+    var x;
     // Update the count down every 1 second
-    var x = setInterval(function() {
+    x = setInterval(function() {
 
         // Get todays date and time
         var now = new Date().getTime();
@@ -29,10 +30,11 @@ $(document).ready(function() {
         // Display the result in the element with id="demo"
         $("#demo").html(days + "d " + hours + "h " + minutes + "m " + seconds + "s ");
 
-        // If the count down is finished, write some text 
-        if (distance < 0) {
-            clearInterval(x);
-            $("demo").html("EXPIRED");
+        // If the count down is finished, write some text
+        if (distance < 0 && x) {
+                clearInterval(x);
+                $("#demo").html("EXPIRED");
+                x = null;
         }
     }, 1000);
 

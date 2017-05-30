@@ -44,6 +44,7 @@ INSTALLED_APPS = [
     'autoshop.products',
     'autoshop.categories',
     'autoshop.users',
+    'autoshop.sign',
     'smart_selects',
 ]
 
@@ -64,7 +65,7 @@ MIDDLEWARE = [
     ]
 
 if DEBUG:
-    MIDDLEWARE = [
+    MIDDLEWARE += [
         'debug_toolbar.middleware.DebugToolbarMiddleware',
     ]
 
@@ -141,3 +142,6 @@ STATICFILES_DIRS = [
 
 MEDIA_URL = '/media/'
 MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
+
+REDIRECT_URL = '/'
+LOGIN_URL = '/sign-in/'

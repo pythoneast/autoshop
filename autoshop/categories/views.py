@@ -6,8 +6,8 @@ from autoshop.products.models import Product
 from django.shortcuts import render
 from django.core.paginator import Paginator, EmptyPage, PageNotAnInteger
 
-# Create your views here.
 
+# Create your views here.
 def cat_list(request, cat_id):
     categories = Category.objects.all()
     subcategories = Subcategory.objects.all()
@@ -41,6 +41,10 @@ def subcat_list(request, cat_id, subcat_id):
     current_subcategory = Subcategory.objects.get(id=subcat_id)
 
     products = Product.objects.filter(subcategories=subcat_id)
+
+    sort_by = request.GET.get('order_by')
+    if sort_by:
+        products = products.order_by(sort_by)
     paginator = Paginator(products, 7)  # Show 7 contacts per page
 
     page = request.GET.get('page')

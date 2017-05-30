@@ -77,7 +77,7 @@ div.top_header > img {
     transition: 0.3s;
 }
 
-.fa-user-circle-o {
+.fa-user-circle-o, .fa-sign-out, .fa-sign-in, .fa-user-plus {
     float: left;
     margin-top: 10px;
 }
@@ -361,17 +361,17 @@ img#tovar_dnya {
 }
 
 #good_price_title {
-    float: left;
+    text-align: left;
 }
 
 #demo {
-    padding: 10px;
     color: red;
-    font-size: 26px;
+    font-size: 20px;
     font-family: fantasy;
     position: absolute;
-    top: 15px;
+    top: 30px;
     right: 20px;
+    text-align: right;
 }
 
 .price_top {
@@ -452,17 +452,15 @@ p{
 /*Footer starts here */
 .footer1 {
     text-decoration: none;
-    font-size: 25px;
-    font-family: "Times New Roman", serif;
-    font-style: italic;
+    font-size: 22px;
     color: white;
 
 }
 .jumbotron2 {
-    padding: 30px 50px;
+    padding: 25px 40px;
     height: 100%;
     margin-top: 20px;
-    background: black;
+    background: #4d4d4d;
 }
 
 span {
@@ -478,9 +476,7 @@ span {
     margin-left: 40rem;
     margin-top: 10rem;
 }
-.elsom {
-    margin-left: 11rem;
-}
+
 .link {
     color: #808080;
     margin-left: 5rem;
@@ -499,7 +495,8 @@ a.eliza:hover {
 }
 
 li.spisok {
-    margin-left: 69px;
+    margin-left: 70px;
+    margin-bottom: 5px;
 }
 
 i.ikonki {

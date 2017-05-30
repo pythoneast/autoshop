@@ -1,0 +1,81 @@
+{% load static %}
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8" />
+    <link rel="stylesheet" type="text/css" href="{% static 'css/bootstrap.min.css' %}">
+    <link rel="stylesheet" type="text/css" href="{% static 'css/font-awesome-4.7.0/css/font-awesome.min.css' %}">
+    <link rel="stylesheet" type="text/css" href="{% static 'css/style.css' %}">
+    <title>Войти</title>
+
+    <style>
+        .forma {
+            height: 500px;
+            border: 1px solid fuchsia;
+            padding-top: 50px;
+        }
+
+        .main_kub {
+            height: auto;
+            border: 1px solid black;
+        }
+
+        .name {
+            background: #d50000;
+            color: white;
+            font-weight: bold;
+            text-align: center;
+            font-size: 26px;
+        }
+
+        span.helptext {
+            display: none;
+        }
+
+        label {
+            display: none;
+        }
+
+        input {
+            width: 100%;
+            margin-top: 15px;
+            height: 35px;
+            padding-left: 10px;
+        }
+
+    </style>
+
+</head>
+
+<body>
+    <div class="container forma">
+        <div class="row">
+            <div class="col-md-offset-3 col-md-6 main_kub">
+                <div class="row">
+                    <div class="col-md-12 name">
+                        autoshop
+                    </div>
+                </div>
+                <div class="row">
+                    <h4 style="text-align: center"> Вход </h4>
+                    <div class="col-md-8 col-md-offset-2">
+                        <form method="post">
+                            {% csrf_token %}
+                            {{ form }}
+                            <br/>
+                            <input class="btn btn-lg btn-success" type="submit" value="Войти" id="signup" style="float:right; background: #d50000"/>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script type="text/javascript" src="{% static 'js/jquery-3.2.1.min.js' %}"></script>
+    <script type="text/javascript" src="{% static 'js/script.js' %}"></script>
+    <script type="text/javascript" src="{% static 'js/bootstrap.min.js' %}"></script>
+    <script type="text/javascript" src="{% static 'slick/slick.min.js' %}"></script>
+</body>
+
+</html>
