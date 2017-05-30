@@ -21,10 +21,11 @@ from django.conf.urls.static import static
 from autoshop.sign import views as sign_views
 
 urlpatterns = [
+    url(r'^$', views.index, name='index-main'),
     url(r'^admin/', admin.site.urls),
     url(r'^chaining/', include('smart_selects.urls')),
-    url(r'^$', views.index, name='index-main'),
     url(r'^products/', include('autoshop.products.urls')),
+    url(r'^users/', include ('autoshop.users.urls')),
     url(r'^catalog/', include('autoshop.categories.urls')),
     url(r'^sign-in/$', sign_views.signin, name='signin'),
     url(r'^sign-up/$', sign_views.signup, name='signup'),
