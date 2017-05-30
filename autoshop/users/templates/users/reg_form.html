@@ -1,9 +1,0 @@
-{% extends 'base.html' %}
-
-{% block article %}
-
-<form method="post">
-	{% csrf_token %}
-	{{form.as_p}}
-</form> 
-{% endblock %}
