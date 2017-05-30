@@ -1,4 +1,4 @@
-from autoshop.sign.forms import SignInForm, SignUpForm
+from autoshop.users.forms import SignInForm, SignUpForm
 from django.contrib import messages
 from django.contrib.auth import authenticate, login
 from django.contrib.auth import logout
