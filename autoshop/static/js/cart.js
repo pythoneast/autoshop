@@ -12,8 +12,7 @@ function checkCart() {
                 .map(function (x) {
                     return 'ids=' + x;
                 })
-                .join('&')
-            ;
+                .join('&');
 
         $.ajax({
             url: '/items/' + urlParams,

@@ -41,10 +41,10 @@ function checkCart() {
 
 /* Показываем содержимое корзины */
 
-function showMiniCart() {
-    var out = '';
-    for (var i in cart) {
-        out += i + ' --- ' + cart[i] + '<br>';
-    }
-    $('#mini-cart').html(out);
-}
+// function showMiniCart() {
+//     var out = '';
+//     for (var i in cart) {
+//         out += i + ' --- ' + cart[i] + '<br>';
+//     }
+//     $('#mini-cart').html(out);
+// }
