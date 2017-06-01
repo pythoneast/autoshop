@@ -3,7 +3,6 @@
  */
 
 /* Корзина */
-
 function checkCart() {
     // проверяю наличие корзины в localStorage
     if (localStorage.getItem('cart') != null) {
@@ -20,9 +19,9 @@ function checkCart() {
             url: '/items/' + urlParams,
             success: function (products) {
                 if (products.length < 1) {
+                    $('footer.jumbotron2').addClass('nujno');
                     return false;
                 }
-
                 renderCart(products, cart);
             }
 
