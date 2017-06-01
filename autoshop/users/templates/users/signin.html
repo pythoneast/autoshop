@@ -12,13 +12,14 @@
     <style>
         .forma {
             height: 500px;
-            border: 1px solid fuchsia;
-            padding-top: 50px;
-        }
+            padding-top: 50px;        }
 
         .main_kub {
             height: auto;
-            border: 1px solid black;
+            padding-bottom: 20px;
+            border-radius: 10px;
+            background: #fff;
+            box-shadow: 0px 0px 9px #d50000;
         }
 
         .name {
@@ -27,6 +28,8 @@
             font-weight: bold;
             text-align: center;
             font-size: 26px;
+            border-top-left-radius: 10px;
+            border-top-right-radius: 10px;
         }
 
         span.helptext {
@@ -39,9 +42,10 @@
 
         input {
             width: 100%;
-            margin-top: 15px;
+            margin-bottom: 30px;
             height: 35px;
             padding-left: 10px;
+            border-radius: 5px;
         }
 
     </style>
@@ -64,7 +68,7 @@
                             {% csrf_token %}
                             {{ form }}
                             <br/>
-                            <input class="btn btn-lg btn-success" type="submit" value="Войти" id="signup" style="float:right; background: #d50000"/>
+                            <input class="center-block btn btn-lg btn-success" type="submit" value="Войти" id="signup" style="text-align: center; padding-bottom: 35px; width: 70%; font-size: 22px; background: #d50000"/>
                         </form>
                     </div>
                 </div>

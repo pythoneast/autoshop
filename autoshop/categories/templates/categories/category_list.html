@@ -74,10 +74,8 @@
                       <form id="form-order-by">
                       <select id="order_by" name="order_by" class="selectpicker show-tick left">
                         <span class="font">
-                            <option class="sorting" {% if sort_by == '1' %}selected {% endif %}value="">По популярности ▲</option>
-                            <option class="sorting" {% if sort_by == '2' %}selected {% endif %}value="">По популярности ▼</option>
-                            <option class="sorting" {% if sort_by == 'price' %}selected {% endif %}value="price">По цене ▲</option>
-                            <option class="sorting" {% if sort_by == '-price' %}selected {% endif %}value="-price">По цене ▼</option>
+                            <option class="sorting" {% if sort_by == 'price' %}selected {% endif %}value="price">По возрастанию ▲</option>
+                            <option class="sorting" {% if sort_by == '-price' %}selected {% endif %}value="-price">По убыванию ▼</option>
                         </span>
                       </select>
                       </form>
@@ -101,8 +99,10 @@
                 <div class="col-sm-4 kontent" >
                     <h2 style="font-weight: bold;">{{ p.price }} <i class="fa fa-rub"></i>
                     </h2>
-                        <a href="path/to/shopping/cart" class="btn btn-danger" style="float:  right; margin-top: -45px;margin-right: 70px;">
-                          <i style="font-size: 25px; margin: -4px 10px;" class="fa fa-shopping-cart" aria-hidden="true"></i></a></p>
+                        <button data-art="{{ p.id }}" href="path/to/shopping/cart" class="add-to-cart btn btn-danger" style="float:  right; margin-top: -45px;margin-right: 70px;">
+                            <i style="font-size: 25px; margin: -4px 10px;" class="fa fa-shopping-cart" aria-hidden="true"></i>
+                        </button>
+                    </p>
                          <hr style= "border: 1px solid rgba(214, 217, 219, 0.8);">
                     <i class="fa fa-car" aria-hidden="true"><h5 style="margin-top: -15px; margin-left: 20px;font-weight: bold;">Доставка на дом</h5></i>
                     <h6 style="margin-top: -22px; margin-left: 160px;">Цена: 250с</h6>
@@ -125,3 +125,7 @@
         </div>
     </div>
 {% endblock article %}
+
+{% block javascript %}
+    <script type="text/javascript" src="{% static 'js/eshop.js' %}"></script>
+{% endblock javascript %}

@@ -44,6 +44,7 @@ INSTALLED_APPS = [
     'autoshop.products',
     'autoshop.categories',
     'autoshop.users',
+    'autoshop.order',
     'smart_selects',
 ]
 

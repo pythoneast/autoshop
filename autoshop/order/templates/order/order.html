@@ -1,0 +1,37 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block page_title %}
+    Product: {{ product.title }}
+{% endblock page_title %}
+{% block css %}
+    <style>
+        article {
+            padding-top: 0;
+        }
+
+        .jumbotron2 {
+            margin-top: 0;
+        }
+
+        .obertka {
+            margin-top: 20px;
+            margin-right: 10px;
+        }
+
+        .opisanie {
+            padding: 20px;
+            border-right: 1px solid rgba(214, 217, 219, 0.8);
+            border-left: 1px solid rgba(214, 217, 219, 0.8);
+        }
+
+    </style>
+{% endblock css %}
+{% block article %}
+
+
+
+{% endblock article %}
+
+{% block javascript %}
+    <script type="text/javascript" src="{% static 'js/cart.js' %}"></script>
+{% endblock javascript %}

@@ -2,8 +2,9 @@
 {% load static %}
 {% block page_title %}Магазин автотовар{% endblock page_title %}
 {% block article %}
-    <p id="expire_date" data-expire="{{ day_product.last.expire_date|date:'M d, Y H:i:s' }}" style="display: none"></p>
-    <div class="container-fluid kaplayan">
+    <p id="expire_date" data-expire="{{ day_product.last.expire_date|date:'M d, Y H:i:s' }}" style="display: none"
+       xmlns="http://www.w3.org/1999/html"></p>
+    <div class="container-fluid kaplayan hidden-xs hidden-sm">
         <div class="row">
             <div class="hidden-xs col-sm-2 categories side">
                 <ul class="menu">
@@ -85,6 +86,9 @@
         <h2 class="new">Акции и Спецпредложения <i class="hidden-xs fa fa-arrow-circle-right fa-lg arrow"
                                                      aria-hidden="true"></i></h2>
     </div>
+    <div id="mini-cart">
+
+    </div>
     <div class="container">
         <div class="row">
             <div class="card-group">
@@ -101,9 +105,13 @@
                                 <h5>(черный мат)</h5>
                             </a>
                             <div class="card-footer">
-                                <p><strong><span style="text-decoration: line-through; color: grey">{{ d.price }}</span> {{ d.discounted_price }}</strong> <i class="fa fa-rub fa-lg" aria-hidden="true"></i>
-                                    <a href="{% url 'product-detail' d.id %}" class="btn btn-warning">
-                                        <i class="fa fa-shopping-cart" aria-hidden="true"></i></a></p>
+                                <p>
+                                    <strong><span style="text-decoration: line-through; color: grey">{{ d.price }}</span> {{ d.discounted_price }}</strong>
+                                    <i class="fa fa-rub fa-lg" aria-hidden="true"></i>
+                                    <button data-art="{{ d.id }}" class="btn btn-warning add-to-cart">
+                                        <i class="fa fa-shopping-cart fa-lg" aria-hidden="true"></i>
+                                    </button>
+                                </p>
                                 <small class="text-muted">Last updated 3 mins ago</small>
                             </div>
                         </div>
@@ -138,9 +146,9 @@
                             </a>
                             <div class="card-footer">
                                 <p><strong>{{ n.price }}</strong> <i class="fa fa-rub fa-lg" aria-hidden="true"></i>
-                                    <a href="{% url 'product-detail' n.id %}" class="btn btn-warning">
-                                        <i class="fa fa-shopping-cart" aria-hidden="true"></i>
-                                    </a>
+                                    <button data-art="{{ n.id }}" class="btn btn-warning add-to-cart">
+                                        <i class="fa fa-shopping-cart fa-lg" aria-hidden="true"></i>
+                                    </button>
                                 </p>
                                 <small class="text-muted">Last updated 3 mins ago</small>
                             </div>
@@ -151,3 +159,7 @@
         </div>
     </div>
 {% endblock article %}
+
+{% block javascript %}
+    <script type="text/javascript" src="{% static 'js/eshop.js' %}"></script>
+{% endblock javascript %}

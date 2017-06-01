@@ -17,19 +17,22 @@ from django.conf import settings
 from django.conf.urls import url, include
 from django.conf.urls.static import static
 from django.contrib import admin
-
+from django.views.generic import TemplateView
 from autoshop import views
 from autoshop.users import views as sign_views
+from autoshop.products import views as products_views
 
 urlpatterns = [
     url(r'^$', views.index, name='index-main'),
     url(r'^admin/', admin.site.urls),
+    url(r'^cart/$', TemplateView.as_view(template_name="products/cart.html"), name='cart'),
     url(r'^chaining/', include('smart_selects.urls')),
     url(r'^products/', include('autoshop.products.urls')),
     url(r'^catalog/', include('autoshop.categories.urls')),
     url(r'^sign-in/$', sign_views.signin, name='signin'),
     url(r'^sign-up/$', sign_views.signup, name='signup'),
     url(r'^sign-out/$', sign_views.signout, name='signout'),
+    url(r'^items/$', products_views.get_products_by_ajax, name='product-ajax')
 ] + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
 
 if settings.DEBUG:

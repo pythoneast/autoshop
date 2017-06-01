@@ -1,0 +1,49 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block page_title %}
+    Product: {{ product.title }}
+{% endblock page_title %}
+{% block css %}
+    <style>
+        article {
+            padding-top: 0;
+        }
+
+        .jumbotron2 {
+            margin-top: 0;
+        }
+
+        .obertka {
+            margin-top: 20px;
+            margin-right: 10px;
+        }
+
+        .opisanie {
+            padding: 20px;
+            border-right: 1px solid rgba(214, 217, 219, 0.8);
+            border-left: 1px solid rgba(214, 217, 219, 0.8);
+        }
+
+    </style>
+{% endblock css %}
+{% block article %}
+
+    <div id="my-cart"></div>
+    <div style="margin: 50px 0">
+        <form method="post" action="" class="">
+{#            <div class="form-group">#}
+{#                <label for="number">Номер телефона:</label>#}
+{#                <input type="text" class="form-control" id="number">#}
+{#            </div>#}
+{#            <div class="form-group">#}
+{#                <label for="address">Адрес:</label>#}
+{#                <input type="text" class="form-control" id="address">#}
+{#            </div>#}
+            <a href="" id="btn-checkout" class="btn btn-danger center-block" style="display: none; width: 30% ;font-size: 20px; padding: 10px;">Оформить заказ</a>
+        </form>
+    </div>
+{% endblock article %}
+
+{% block javascript %}
+    <script type="text/javascript" src="{% static 'js/cart.js' %}"></script>
+{% endblock javascript %}

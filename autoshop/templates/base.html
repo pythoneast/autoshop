@@ -15,7 +15,7 @@
 </head>
 
 <body>
-    <header>
+    <header class="hidden-xs hidden-sm">
         <div class="container-fluid">
             <div class="row">
                 <div class="top_header nopadding">
@@ -39,7 +39,7 @@
                             </div>
                         </a>
 
-                        <a href="">
+                        <a href="{% url 'cart' %}">
                             <div class="hidden-xs hidden-sm col-md-2 cart">
                                 <i class="fa fa-cart-arrow-down fa-3x" style="color:#faac3d"></i>
                                 <p class="user-cart">
@@ -192,9 +192,10 @@
 		</div>
 	</footer>
     <script type="text/javascript" src="{% static 'js/jquery-3.2.1.min.js' %}"></script>
-    <script type="text/javascript" src="{% static 'js/script.js' %}"></script>
     <script type="text/javascript" src="{% static 'js/bootstrap.min.js' %}"></script>
     <script type="text/javascript" src="{% static 'slick/slick.min.js' %}"></script>
+    <script type="text/javascript" src="{% static 'js/script.js' %}"></script>
+    {% block javascript %}{% endblock javascript %}
 </body>
 
 </html>
